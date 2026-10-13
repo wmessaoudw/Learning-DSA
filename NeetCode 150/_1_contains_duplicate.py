@@ -2,7 +2,7 @@
 from typing import List
 
 
-class Solution:
+class Solution: #time o(n) space o(n)
     def hasDuplicate(self, nums: List[int]) -> bool:
         check = set()
         for i in range(len(nums)):
@@ -13,7 +13,7 @@ class Solution:
 
         return False
 #Solution 2
-class Solution2:
+class Solution2: #time o(nlogn) space o(1)
     def hasDuplicate(self, nums: List[int]) -> bool:
         nums.sort()
         for i in range(len(nums)-1):
@@ -21,7 +21,7 @@ class Solution2:
                 return True
         return False
 #Solution 3
-class Solution3:
+class Solution3: # time o(n^2) space o(1)
 
     def hasDuplicate(self, nums: List[int]) -> bool:
 
